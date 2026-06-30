@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formula 1 - Meu Blog</title>
+    <title>AMO FÓRMULA 1 | Blog</title>
    
     <style>
         * {
@@ -15,96 +15,102 @@
             font-family: 'Arial', sans-serif;
             background-color: #0F0F0F;
             color: #FFFFFF;
-            line-height: 1.6;
+            line-height: 1.7;
         }
         header {
             background: linear-gradient(135deg, #FF1801, #8B0000);
-            padding: 50px 20px;
+            padding: 70px 20px;
             text-align: center;
-            border-bottom: 4px solid #FFD700;
+            border-bottom: 5px solid #FFD700;
         }
         header h1 {
-            font-size: 3em;
+            font-size: 3.4em;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 5px;
             margin-bottom: 12px;
         }
         header p {
-            font-size: 1.3em;
+            font-size: 1.4em;
             max-width: 800px;
             margin: 0 auto;
             opacity: 0.95;
         }
+
         main {
-            max-width: 800px;
+            max-width: 900px;
             margin: 40px auto;
-            padding: 40px 20px;
-            background-color: #1A1A1A;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(255, 24, 1, 0.2);
-        }
-        main h2 {
-            font-size: 2.2em;
-            color: #FF1801;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-        main .autor {
-            text-align: center;
-            font-style: italic;
-            color: #CCCCCC;
-            margin-bottom: 30px;
-            font-size: 1.1em;
-        }
-        main p {
-            font-size: 1.15em;
-            text-align: justify;
-            max-width: 700px;
-            margin: 0 auto 20px;
-            color: #EEEEEE;
+            padding: 20px;
         }
 
-        /* Botão de Curtida */
+        .post {
+            background-color: #1A1A1A;
+            margin-bottom: 50px;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(255, 24, 1, 0.2);
+            transition: all 0.3s;
+        }
+        .post:hover {
+            box-shadow: 0 15px 40px rgba(255, 24, 1, 0.35);
+            transform: translateY(-5px);
+        }
+
+        .post-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .post-header h2 {
+            font-size: 2.3em;
+            color: #FF1801;
+            margin-bottom: 8px;
+        }
+        .post-meta {
+            color: #AAAAAA;
+            font-size: 1.1em;
+        }
+
+        .post-content {
+            font-size: 1.18em;
+            text-align: justify;
+            color: #EEEEEE;
+            margin-bottom: 40px;
+        }
+
+        /* Curtida */
         .curtida-container {
             text-align: center;
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 2px solid #FF1801;
+            padding: 25px;
+            background-color: #111111;
+            border-radius: 12px;
+            border: 2px solid #FF1801;
         }
-        
+        .curtida-container p {
+            font-size: 1.25em;
+            margin-bottom: 12px;
+            color: #FFDDDD;
+        }
         .curtida-btn {
-            font-size: 42px;
-            padding: 15px 40px;
-            background-color: #1A1A1A;
+            font-size: 45px;
+            padding: 12px 45px;
+            background-color: transparent;
             color: white;
             border: 3px solid #FF1801;
             border-radius: 50px;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
             font-weight: bold;
         }
-        
         .curtida-btn:hover {
             background-color: #FF1801;
             transform: scale(1.08);
-            box-shadow: 0 0 20px rgba(255, 24, 1, 0.6);
+            box-shadow: 0 0 25px rgba(255, 24, 1, 0.7);
         }
-        
-        .curtida-btn:active {
-            transform: scale(0.95);
-        }
-
-        span.contador {
-            font-size: 28px;
+        .contador {
+            font-size: 32px;
             font-weight: bold;
-        }
-
-        /* Efeito hover no conteúdo */
-        main:hover {
-            box-shadow: 0 15px 40px rgba(255, 24, 1, 0.3);
         }
     </style>
 </head>
@@ -116,33 +122,64 @@
     </header>
 
     <main>
-        <h2>Meu primeiro post</h2>
-        <p class="autor">Por: Vinicius Hecke</p>
-        <p>
-            Fórmula 1 é simplesmente top! Eu amo demais essa mistura de velocidade,
-            estratégia, tecnologia e emoção. Aqui vou trazer tudo sobre os pilotos,
-            equipes, bastidores e minhas opiniões sobre as corridas.
-        </p>
 
-        <!-- Botão de Curtida -->
-        <div class="curtida-container">
-            <p style="margin-bottom: 15px; font-size: 1.2em;">❤️ Curtiu este post?</p>
-            <button class="curtida-btn">
-                ❤️ <span class="contador">0</span>
-            </button>
-        </div>
+        <!-- Primeiro Post -->
+        <article class="post">
+            <div class="post-header">
+                <h2>O Domínio da Red Bull em 2026</h2>
+                <p class="post-meta">Por: Vinicius Hecke • 30 de Junho de 2026</p>
+            </div>
+            <div class="post-content">
+                <p>
+                    A temporada de 2026 promete ser uma das mais interessantes dos últimos anos. 
+                    Com as novas regras de motores, a Red Bull continua mostrando força, mas Ferrari 
+                    e Mercedes estão se aproximando perigosamente. Verstappen segue dominante, mas 
+                    a briga pelo título deve ser acirrada.
+                </p>
+            </div>
+            <div class="curtida-container">
+                <p>❤️ Curtiu este post?</p>
+                <button class="curtida-btn">
+                    ❤️ <span class="contador">0</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- Segundo Post -->
+        <article class="post">
+            <div class="post-header">
+                <h2>Por que a Ferrari ainda sofre no Q3?</h2>
+                <p class="post-meta">Por: Vinicius Hecke • 28 de Junho de 2026</p>
+            </div>
+            <div class="post-content">
+                <p>
+                    Mais um final de semana onde a Ferrari mostrou velocidade no treino, mas 
+                    decepcionou na classificação. Estratégia, confiabilidade e pressão psicológica 
+                    continuam sendo os pontos fracos da Scuderia. Será que 2026 será o ano da virada?
+                </p>
+            </div>
+            <div class="curtida-container">
+                <p>❤️ Curtiu este post?</p>
+                <button class="curtida-btn">
+                    ❤️ <span class="contador">0</span>
+                </button>
+            </div>
+        </article>
+
     </main>
 
     <script>
-        const botao = document.querySelector(".curtida-btn");
-        const contador = document.querySelector(".contador");
-
-        function botaoClicado() {
-            contador.textContent = Number(contador.textContent) + 1;
-        }
-
-        botao.addEventListener("click", botaoClicado);
+        // Funcionalidade para todos os botões de curtida
+        document.querySelectorAll('.curtida-btn').forEach(botao => {
+            const contador = botao.querySelector('.contador');
+            
+            botao.addEventListener('click', () => {
+                let numero = Number(contador.textContent);
+                contador.textContent = numero + 1;
+            });
+        });
     </script>
 
 </body>
+</html>
 </html>
