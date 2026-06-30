@@ -4,42 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formula 1 - Meu Blog</title>
-    
+   
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Arial', sans-serif;
             background-color: #0F0F0F;
             color: #FFFFFF;
             line-height: 1.6;
         }
-
         header {
             background: linear-gradient(135deg, #FF1801, #8B0000);
             padding: 50px 20px;
             text-align: center;
             border-bottom: 4px solid #FFD700;
         }
-
         header h1 {
             font-size: 3em;
             text-transform: uppercase;
             letter-spacing: 3px;
             margin-bottom: 12px;
         }
-
         header p {
             font-size: 1.3em;
             max-width: 800px;
             margin: 0 auto;
             opacity: 0.95;
         }
-
         main {
             max-width: 800px;
             margin: 40px auto;
@@ -48,14 +43,12 @@
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(255, 24, 1, 0.2);
         }
-
         main h2 {
             font-size: 2.2em;
             color: #FF1801;
             text-align: center;
             margin-bottom: 15px;
         }
-
         main .autor {
             text-align: center;
             font-style: italic;
@@ -63,13 +56,50 @@
             margin-bottom: 30px;
             font-size: 1.1em;
         }
-
         main p {
             font-size: 1.15em;
             text-align: justify;
             max-width: 700px;
-            margin: 0 auto;
+            margin: 0 auto 20px;
             color: #EEEEEE;
+        }
+
+        /* Botão de Curtida */
+        .curtida-container {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #FF1801;
+        }
+        
+        .curtida-btn {
+            font-size: 42px;
+            padding: 15px 40px;
+            background-color: #1A1A1A;
+            color: white;
+            border: 3px solid #FF1801;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: bold;
+        }
+        
+        .curtida-btn:hover {
+            background-color: #FF1801;
+            transform: scale(1.08);
+            box-shadow: 0 0 20px rgba(255, 24, 1, 0.6);
+        }
+        
+        .curtida-btn:active {
+            transform: scale(0.95);
+        }
+
+        span.contador {
+            font-size: 28px;
+            font-weight: bold;
         }
 
         /* Efeito hover no conteúdo */
@@ -79,7 +109,7 @@
     </style>
 </head>
 <body>
-    
+   
     <header>
         <h1>AMO FÓRMULA 1</h1>
         <p>Aqui compartilho meus conhecimentos, análises e paixão pela categoria rainha do automobilismo</p>
@@ -89,11 +119,30 @@
         <h2>Meu primeiro post</h2>
         <p class="autor">Por: Vinicius Hecke</p>
         <p>
-            Fórmula 1 é simplesmente top! Eu amo demais essa mistura de velocidade, 
-            estratégia, tecnologia e emoção. Aqui vou trazer tudo sobre os pilotos, 
+            Fórmula 1 é simplesmente top! Eu amo demais essa mistura de velocidade,
+            estratégia, tecnologia e emoção. Aqui vou trazer tudo sobre os pilotos,
             equipes, bastidores e minhas opiniões sobre as corridas.
         </p>
+
+        <!-- Botão de Curtida -->
+        <div class="curtida-container">
+            <p style="margin-bottom: 15px; font-size: 1.2em;">❤️ Curtiu este post?</p>
+            <button class="curtida-btn">
+                ❤️ <span class="contador">0</span>
+            </button>
+        </div>
     </main>
+
+    <script>
+        const botao = document.querySelector(".curtida-btn");
+        const contador = document.querySelector(".contador");
+
+        function botaoClicado() {
+            contador.textContent = Number(contador.textContent) + 1;
+        }
+
+        botao.addEventListener("click", botaoClicado);
+    </script>
 
 </body>
 </html>
